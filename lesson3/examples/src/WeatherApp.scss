@@ -1,0 +1,92 @@
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/search.css');
+@mixin box-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $color: $default) {
+    box-shadow: $x-axis $y-axis $blur $color;
+  }
+
+body {
+    background-color: #d3c4c4;
+}
+
+
+.container{
+    background-image: linear-gradient(to bottom, #fff, grey);
+    padding: 1.2rem;
+    max-width: 35.5rem;
+    width: 50vw;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%);
+    border-radius: 10px;
+    @include box-shadow(0, 1rem, 2rem, #d6d2cb);
+
+    .title {
+        text-align: center;
+        color: #fff;
+
+        .one{
+            color: orange;
+        }
+
+        .two{
+            color: green;
+        }
+    }
+
+    .content {
+        display: flex;
+        gap: .5rem;
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        border-radius: 10px;
+
+        .formControl{
+            position: relative;
+            width: 200px;
+            height: 10px;
+            border: none;
+            padding: .9rem .3rem;
+            transition-duration: 800ms;
+            overflow: hidden;
+            background: url(https://css.gg/search.svg) no-repeat transparent;
+            background-size: 22px;
+            background-position: 45% 50%;
+        }
+
+        .formControl:hover {
+            cursor: pointer;
+            background:
+            url(https://css.gg/search.svg) no-repeat transparent;
+            background-size: 22px;
+            background-position: 45% 50%;
+            border-radius: 10px;
+        }
+
+        .formControl:focus {
+            width: 200px;
+            cursor: pointer;
+            padding-left: 40px;
+            color: #fff;
+            font-size: 15px;
+            outline: none;
+            border: 1px solid #fff;
+            background: url(https://css.gg/search.svg) no-repeat transparent;
+            background-size: 22px;
+            background-position: 10px 50%;
+            border-radius: 10px;
+        }
+
+        .btn {
+            padding: .2rem .4rem;
+            border: none;
+            background: none;
+            
+            img{
+                cursor: pointer;
+                width: 20px;
+            }
+        }
+    }
+}

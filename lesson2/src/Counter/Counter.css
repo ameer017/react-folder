@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forCount {
+    color: #c7803d;
+    width: 50vw;
+    max-width: 25.5rem;
+    text-align: center;
+    padding: 1.2rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    box-shadow: inset 0 1.25rem 2rem #1d3c1d;
+    background-image: url('https://images.pexels.com/photos/3756659/pexels-photo-3756659.jpeg?auto=compress&cs=tinysrgb&w=400');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text {
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    border: 2px solid;
+    letter-spacing: .1em;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+button {
+    padding:  .6rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: 1px dashed #9c781e;
+}
+
+.primaryBtn {
+    margin-right: 4rem;
+    background-color: green;
+    color: #fff;
+}
+
+p {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: .6rem;
+    border: 2px solid green;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.para {
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}

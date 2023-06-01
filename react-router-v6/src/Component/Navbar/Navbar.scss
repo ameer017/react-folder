@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    color: #000;
+}
+
+nav {
+    background-color: #f6f3f3;
+    padding: .6rem 2rem;
+    box-shadow: 0 .8rem 1.2rem rgba($color: #a09696, $alpha: 0.3);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+
+    .logo {
+        text-align: center;
+
+        .title {
+            margin-top: -.1rem;
+            margin-bottom: -.2rem;
+    
+            .one{
+                color: green;
+            }
+    
+            .two{
+                color: orange;
+            }
+        }
+        small {
+            letter-spacing: .1em;
+            position: relative;
+            cursor: pointer;
+        }
+    
+        small:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-image: linear-gradient(to right, green, orange);
+            transform-origin: bottom center;
+            transition: transform 0.25s ease;
+            -webkit-transition: transform 0.25s ease;
+            -moz-transition: transform 0.25s ease;
+            -ms-transition: transform 0.25s ease;
+            -o-transition: transform 0.25s ease;
+        }
+    
+        small:hover::after{
+            transform: scaleX(1);
+            transform-origin: bottom center;
+        }
+    }
+
+    .appNavList{
+        display: flex;
+        gap: 3rem;
+        list-style: none;
+
+        li {
+            font-size: 14px;
+            position: relative;
+        }
+
+        li:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-image: linear-gradient(to right, white, black, white);
+            transform-origin: bottom center;
+            transition: transform 0.25s ease;
+        }
+    
+        li:hover::after{
+            transform: scaleX(1);
+            transform-origin: bottom center;
+        }
+    }
+    
+    .btn {
+        padding: .5rem;
+        background-color: #f6f3f3;
+        border: 1px solid;
+        border-radius: 5px;
+        font-size: 11px;
+        cursor: pointer;
+    }
+}

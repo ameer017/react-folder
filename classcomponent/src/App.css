@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutCon {
+  /* background-image: url(https://images.pexels.com/photos/2736499/pexels-photo-2736499.jpeg?auto=compress&cs=tinysrgb&w=400);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  background-color: #786751;
+  width: 60vw;
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  color: #fff;
+}
+
+.text {
+  color: #fff;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  gap: .4rem;
+}
+
+.controlInput {
+  padding: .4rem;
+  border-radius: 5px;
+  border: none;
+  letter-spacing: .1em;
+  font-size: 15px;
+}

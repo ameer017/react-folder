@@ -1,0 +1,193 @@
+.heading {
+    letter-spacing: .1em;
+    position: relative;
+    cursor: pointer;
+    width: fit-content;
+    font-size: 3rem;
+    margin: 0 auto;
+    letter-spacing: 7.9px;
+    background-image: linear-gradient(to right, gray, white, gray);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+#x {
+    background-image: url(https://images.pexels.com/photos/4744818/pexels-photo-4744818.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heading:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-image: linear-gradient(to right, gray, black, orange);
+    transform-origin: bottom center;
+    transition: transform 0.25s ease;
+}
+
+.heading:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
+
+.search {
+    display: flex;
+    gap: .5rem;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 2rem;
+    box-shadow: 5px 5px 7px #1c1c1c;
+    padding: 2rem;
+    position: relative;
+    
+    .emptyAnim {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #fff;
+        display: inline-block;
+        border-radius: 50%;
+        animation: loader 3s linear infinite;
+        -webkit-animation: loader 3s linear infinite;
+        position: absolute;        
+    }
+
+    .emptyAnim::after {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        width: 36px;
+        height: 36px;
+        border: 4px solid;
+        border-color: #ff9950 transparent;
+    }
+
+    @keyframes loader {
+        0% {
+            transform: scale(1) rotate(360deg);
+        }
+        50% {
+            transform: scale(.7) rotate(-360deg);
+        }
+        100% {
+            transform: scale(1) rotate(360deg);
+        }
+    }
+
+    .searchControl{
+        position: relative;
+        width: 450px;
+        height: 10px;
+        border: none;
+        border-bottom: 1px solid aliceblue;
+        padding: .9rem .3rem;
+        transition-duration: 800ms;
+        overflow: hidden;
+        background: none;
+        font-size: 15px;
+        font-weight: 500;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .searchControl:hover {
+        cursor: pointer;
+        border-radius: 10px;
+        border-color: orange;
+    }
+
+    .searchControl:focus {
+        width: 452px;
+        cursor: pointer;
+        color: #fff;
+        font-size: 1.5rem;
+        outline: none;
+        border: 1px solid #fff;
+        background-size: 22px;
+        background-position: 10px 50%;
+        border-radius: 10px;
+    }
+
+    .btn {
+        padding: .2rem .4rem;
+        border: none;
+        background: none;
+        font-size: 25px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+        cursor: pointer;  
+    }
+
+    .btn:hover {
+        color: orange;
+        transition-duration: 800ms;
+    }
+}
+
+.container {
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.blank{
+    text-align: center;
+    margin-top: 5rem;
+    padding: .2rem 0;
+
+    h2 {
+        font-size: 35px;
+        font-size: 900;
+        color: #ff9950;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+}
+
+$breakpoint-phone: 460px;
+$mini-breakpoint: 320px;
+@media (max-width: $breakpoint-phone) and (min-width: $mini-breakpoint) {
+  .heading {
+    margin-top: 1.3rem;
+    letter-spacing: .1em;
+    text-align: center;
+  }
+
+  .search {
+    width: 90%;
+    box-shadow: none;
+    flex-direction: column;
+    margin-bottom: -3rem;
+
+    .searchControl {
+        width: 350px;
+    }
+
+    .searchControl:focus {
+        width: 400px;
+    }
+
+    .btn {
+        margin-top: 1.5rem;
+    }
+  }
+}

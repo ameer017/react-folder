@@ -1,0 +1,82 @@
+@mixin box-shadow( $horiz : .5em , $vert : .5em , $blur : 0px , $spread : 0px , $color : #8892b0 ){
+    -webkit-box-shadow: $horiz $vert $blur $spread $color;
+    -moz-box-shadow: $horiz $vert $blur $spread $color;
+    box-shadow: $horiz $vert $blur $spread $color;
+  }
+
+.navBar {
+    background-color: #0a192f;
+    width: 95%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: .4rem 1rem;
+    @include box-shadow(0 1.25rem 2rem #8892b0);
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+
+    .logo{
+        color: #8892b0;
+        font-size: 25px;
+    };
+
+    .navList {
+        display: flex;
+        color: #8892b0;
+        list-style: none;
+        gap: 3.2rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .btn {
+        border: 1px solid;
+        padding-block: 6px;
+        padding-inline: 6px;
+        border-radius: 10px;
+    }
+
+    .menu {
+        font-size: 25px;
+        color: #8892b0;
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .navBar{
+        .navList{
+            // display: none;
+            position: fixed;
+            width: 100%;
+            height: 20vh;
+            // background-color: steelblue;
+            top: 180px;
+            left: 0;
+            text-align: center;
+
+            a {
+                display: block;
+                // border: 2px solid;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+        }
+
+        .btn {
+            display: none;
+        }
+        .menu {
+            display: block;
+        }
+
+        
+
+        
+    }
+}

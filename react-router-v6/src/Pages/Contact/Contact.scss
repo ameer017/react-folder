@@ -1,0 +1,48 @@
+.socialBtns {
+    display: flex;
+    column-gap: 20px;
+    list-style: none;
+    background-color: #f6f3f3;
+    padding: .4rem;
+    border-radius: 5px;
+    margin-top: 4rem;
+    justify-content: center;
+
+    .socialBtn{
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        outline: 2px solid #f3e7e7;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: grid;
+        place-items: center;
+    }
+
+    .socialBtn:hover {
+        outline-offset: 3px;
+        outline: 1px dashed brown;
+        color: #fff;
+    }
+
+    .socialBtn:hover:nth-child(1) {
+        background-color: #f6f3f3;   
+    }
+
+    .socialBtn:hover:nth-child(2) {
+        background-color: #43598f;   
+    }
+
+    .socialBtn:hover:nth-child(3) {
+        background-color: #c4302b;
+    }
+
+    .socialBtn:hover:nth-child(4) {
+        background-color: #0072b1;
+    }
+
+    .socialBtn:hover:nth-child(5) {
+        background-color: #267126;
+    }
+    
+}

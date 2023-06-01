@@ -1,0 +1,18 @@
+.heroSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 50vh;
+}
+
+.heroSection h1 {
+    font-size: 30px;
+    font-weight: 900;
+}
+.heroSection img {
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid brown;
+}

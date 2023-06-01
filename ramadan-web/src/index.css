@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,600&display=swap');
+body {
+  background-color: #7a7171;
+  color: #fff;
+  margin: 0;
+  font-family: 'Crimson Text', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+ion-icon {
+  color: aquamarine;
+  margin: 0 5px;
+  background-color: black;
+  border-radius: 5px;
+  animation: myRotate 1s ease 0s infinite;
+  -webkit-animation: myRotate 1s ease 0s infinite;
+}
+
+@keyframes myRotate {
+  100%{
+      transform:rotate(360deg) ;
+}
+}
+
+
+@keyframes myColorChange {
+  20% {
+      background-color: #92652a;
+  }
+  40% {
+      background-color: wheat;
+  }
+  60% {
+      background-color: bisque;
+  }
+  80% {
+      background-color: slategray;
+  }
+  100% {
+      background-color: crimson;
+  }
+} 
+
+a {
+  color: #000;
+  text-decoration: none;
+}
